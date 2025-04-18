@@ -28,7 +28,11 @@ steps:
   args:
   - 'build'
   - '-t'
+<<<<<<< HEAD
   - 'us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+=======
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+>>>>>>> de5716f (initial commit)
   - '.'
 
 # This step pushes the image to Artifact Registry
@@ -38,7 +42,11 @@ steps:
   id: Push
   args:
   - 'push'
+<<<<<<< HEAD
   - 'us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+=======
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+>>>>>>> de5716f (initial commit)
 # [END cloudbuild]
 
 # [START cloudbuild-trigger-cd]
@@ -74,7 +82,11 @@ steps:
     set -x && \
     cd hello-cloudbuild-env && \
     git add kubernetes.yaml && \
+<<<<<<< HEAD
     git commit -m "Deploying image us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:${SHORT_SHA}
+=======
+    git commit -m "Deploying image us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:${SHORT_SHA}
+>>>>>>> de5716f (initial commit)
     Built from commit ${COMMIT_SHA} of repository hello-cloudbuild-app
     Author: $(git log --format='%an <%ae>' -n 1 HEAD)" && \
     git push origin candidate

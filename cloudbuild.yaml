@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> de5716f (initial commit)
 # Copyright 2018 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -29,7 +32,11 @@ steps:
   args:
   - 'build'
   - '-t'
+<<<<<<< HEAD
   - 'us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+=======
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+>>>>>>> de5716f (initial commit)
   - '.'
 
 # This step pushes the image to Artifact Registry
@@ -39,6 +46,7 @@ steps:
   id: Push
   args:
   - 'push'
+<<<<<<< HEAD
   - 'us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
 # [END cloudbuild]
 
@@ -119,3 +127,10 @@ availableSecrets:
 # [END cloudbuild-trigger-cd]
 options:
   logging: CLOUD_LOGGING_ONLY
+=======
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:$SHORT_SHA'
+# [END cloudbuild]
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+>>>>>>> de5716f (initial commit)

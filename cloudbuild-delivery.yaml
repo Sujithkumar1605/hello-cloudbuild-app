@@ -23,7 +23,11 @@ steps:
   - '-f'
   - 'kubernetes.yaml'
   env:
+<<<<<<< HEAD
   - 'CLOUDSDK_COMPUTE_REGION=us-east1'
+=======
+  - 'CLOUDSDK_COMPUTE_REGION=us-central1'
+>>>>>>> de5716f (initial commit)
   - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cloudbuild'
 
 # This step copies the applied manifest to the production branch
